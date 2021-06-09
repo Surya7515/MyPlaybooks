@@ -1,0 +1,11 @@
+---
+- name: this playbook creates a directory
+  hosts: webboy
+  # become: true
+  tasks:
+          - name: creating a file(empty)
+            file:
+                    path: /home/ansadmin/dir1p
+                    state: directory
+
+

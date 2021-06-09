@@ -1,0 +1,12 @@
+---
+- name: this playbook do what ever it wants
+  hosts: all
+  become: true
+  tasks:
+          - name: copying file
+            copy:
+                    src: /home/ansadmin/file1.html
+                    dest: /home/ansadmin
+                    owner: Surya
+                    mode: 0600 
+

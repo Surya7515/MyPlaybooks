@@ -1,0 +1,11 @@
+---
+- name: this playbook deletes a directory
+  hosts: webboy
+  # become: true
+  tasks:
+          - name: deleting dir 
+            file:
+                    path: /home/ansadmin/dir1p
+                    state: absent
+
+

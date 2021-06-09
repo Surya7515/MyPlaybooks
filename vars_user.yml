@@ -1,0 +1,13 @@
+--- 
+- name: Using vars
+  hosts: webboy
+  become: true
+
+  vars:
+           user: bunny
+
+  tasks:
+          - name: creating {{user}}
+            user:
+                    name: "{{user}}"
+

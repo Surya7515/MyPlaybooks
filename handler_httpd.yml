@@ -1,0 +1,23 @@
+---
+- name: my playbook of installing and starting httpd
+  hosts: all
+  become: true
+  tasks:
+          - name: installing httpd
+            yum:
+                    name: httpd
+                    state: installed
+            notify: starting httpd
+
+                        
+  handlers:        
+          - name: starting httpd
+            service:
+                    name: httpd
+                    state: started
+
+                    
+
+            
+
+

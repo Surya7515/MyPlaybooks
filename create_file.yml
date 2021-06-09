@@ -1,0 +1,11 @@
+---
+- name: this playbook creates file
+  hosts: webboy
+  # become: true
+  tasks:
+          - name: creating a file(empty)
+            file:
+                    path: /home/ansadmin/filep
+                    state: touch
+
+

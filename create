@@ -1,0 +1,11 @@
+---
+- name: this playbook installs treee
+  hosts: webboy
+  # become: true
+  tasks:
+          - name: installing a package tree
+            yum:
+                    name: tree
+                    state: installed
+
+

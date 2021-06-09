@@ -1,0 +1,13 @@
+--- 
+- name: Using vars
+  hosts: webboy
+  become: true
+
+  vars_files:
+  - user.yml
+
+  tasks:
+          - name: creating {{user}}
+            user:
+                    name: "{{user}}"
+

@@ -1,0 +1,11 @@
+---
+- name: this playbook installs 
+  hosts: webboy
+  become: true
+  tasks:
+          - name: installing a package git
+            yum:
+                    name: [ 'git', 'gcc', 'tree', 'which', 'docker', 'wget']
+                    state: installed
+
+
